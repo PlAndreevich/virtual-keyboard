@@ -1,0 +1,135 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #272727;
+  text-align: left;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+h1 {
+  margin: 10px 0 0;
+  font-size: 2.5em;
+  font-style: normal;
+  font-weight: 500;
+  color: #3b82f6;
+}
+
+#textarea {
+  display: block;
+  margin: 10px 0 0;
+  padding: 0.8em;
+  width: 670px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.hidden {
+  display: none;
+}
+
+.keyboard {
+  width: 710px;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+button {
+  margin: 0 0 6px 6px;
+  float: left;
+  width: 40px;
+  height: 40px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  background: #666;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  transition: background-color 0.5s;
+}
+
+.keyboard .delete {
+  width: 44px;
+}
+
+.keyboard .tab {
+  width: 50px;
+}
+
+.keyboard .backspace,
+.keyboard .capsLock,
+.keyboard .shiftLeft {
+  width: 100px;
+}
+
+.keyboard .enter,
+.keyboard .shiftRight {
+  width: 86px;
+}
+
+.keyboard .space {
+  width: 330px;
+}
+
+.keyboard .altLeft,
+.keyboard .altRight,
+.keyboard .arrowUp,
+.keyboard .arrowLeft,
+.keyboard .arrowDown,
+.keyboard .arrowRight,
+.keyboard .backspace,
+.keyboard .capsLock,
+.keyboard .controlLeft,
+.keyboard .controlRight,
+.keyboard .delete,
+.keyboard .enter,
+.keyboard .shiftLeft,
+.keyboard .shiftRight,
+.keyboard .tab,
+.keyboard .metaLeft {
+  font-weight: 600;
+  background-color: #222;
+}
+
+button:hover {
+  background-color: #3b82f6 !important;
+}
+
+button.active {
+  background-color: #82b0fa;
+}
+
+p {
+  margin: 0 0 10px;
+  text-align: center;
+}
+
+code {
+  margin: 0;
+  padding: 0.2em 0.4em;
+  font-size: 0.85em;
+  white-space: break-spaces;
+  background-color: #efefef;
+  border-radius: 6px;
+}
+
