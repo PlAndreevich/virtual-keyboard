@@ -65,7 +65,7 @@ button {
   cursor: pointer;
   user-select: none;
   border: none;
-  transition: background-color 0.5s;
+  transition: background-color 0.3s;
 }
 
 .keyboard .delete {
@@ -111,12 +111,9 @@ button {
   background-color: #222;
 }
 
-button:hover {
-  background-color: #3b82f6 !important;
-}
-
+button:hover,
 button.active {
-  background-color: #82b0fa;
+  background-color: #3b82f6 !important;
 }
 
 p {
