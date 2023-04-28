@@ -1,450 +1,449 @@
-/* eslint-disable no-mixed-spaces-and-tabs */
 /* global document */
 /* Массив с клавишами */
 const keys = [
   {
-    class: 'backquote',
+    class: 'BackQuote',
     rusLower: 'ё',
     rusUpper: 'Ё',
     engLower: '`',
     engUpper: '~',
   },
   {
-    class: 'digit1',
+    class: 'Digit1',
     rusLower: '1',
     rusUpper: '!',
     engLower: '1',
     engUpper: '!',
   },
   {
-    class: 'digit2',
+    class: 'Digit2',
     rusLower: '2',
     rusUpper: '"',
     engLower: '2',
     engUpper: '@',
   },
   {
-    class: 'digit3',
+    class: 'Digit3',
     rusLower: '3',
     rusUpper: '№',
     engLower: '3',
     engUpper: '#',
   },
   {
-    class: 'digit4',
+    class: 'Digit4',
     rusLower: '4',
     rusUpper: ';',
     engLower: '4',
     engUpper: '$',
   },
   {
-    class: 'digit5',
+    class: 'Digit5',
     rusLower: '5',
     rusUpper: '%',
     engLower: '5',
     engUpper: '%',
   },
   {
-    class: 'digit6',
+    class: 'Digit6',
     rusLower: '6',
     rusUpper: ':',
     engLower: '6',
     engUpper: '^',
   },
   {
-    class: 'digit7',
+    class: 'Digit7',
     rusLower: '7',
     rusUpper: '?',
     engLower: '7',
     engUpper: '&',
   },
   {
-    class: 'digit8',
+    class: 'Digit8',
     rusLower: '8',
     rusUpper: '*',
     engLower: '8',
     engUpper: '*',
   },
   {
-    class: 'digit9',
+    class: 'Digit9',
     rusLower: '9',
     rusUpper: '(',
     engLower: '9',
     engUpper: '(',
   },
   {
-    class: 'digit0',
+    class: 'Digit0',
     rusLower: '0',
     rusUpper: ')',
     engLower: '0',
     engUpper: ')',
   },
   {
-    class: 'minus',
+    class: 'Minus',
     rusLower: '-',
     rusUpper: '_',
     engLower: '-',
     engUpper: '_',
   },
   {
-    class: 'equal',
+    class: 'Equal',
     rusLower: '=',
     rusUpper: '+',
     engLower: '=',
     engUpper: '+',
   },
   {
-    class: 'backspace',
-    rusLower: 'Backspace',
-    rusUpper: 'Backspace',
-    engLower: 'Backspace',
-    engUpper: 'Backspace',
+    class: 'BackSpace',
+    rusLower: 'BackSpace',
+    rusUpper: 'BackSpace',
+    engLower: 'BackSpace',
+    engUpper: 'BackSpace',
   },
   {
-    class: 'tab',
+    class: 'Tab',
     rusLower: 'Tab',
     rusUpper: 'Tab',
     engLower: 'Tab',
     engUpper: 'Tab',
   },
   {
-    class: 'keyQ',
+    class: 'KeyQ',
     rusLower: 'й',
     rusUpper: 'Й',
     engLower: 'q',
     engUpper: 'Q',
   },
   {
-    class: 'keyW',
+    class: 'KeyW',
     rusLower: 'ц',
     rusUpper: 'Ц',
     engLower: 'w',
     engUpper: 'W',
   },
   {
-    class: 'keyE',
+    class: 'KeyE',
     rusLower: 'у',
     rusUpper: 'У',
     engLower: 'e',
     engUpper: 'E',
   },
   {
-    class: 'keyR',
+    class: 'KeyR',
     rusLower: 'к',
     rusUpper: 'К',
     engLower: 'r',
     engUpper: 'R',
   },
   {
-    class: 'keyT',
+    class: 'KeyT',
     rusLower: 'е',
     rusUpper: 'Е',
     engLower: 't',
     engUpper: 'T',
   },
   {
-    class: 'keyY',
+    class: 'KeyY',
     rusLower: 'н',
     rusUpper: 'Н',
     engLower: 'y',
     engUpper: 'Y',
   },
   {
-    class: 'keyU',
+    class: 'KeyU',
     rusLower: 'г',
     rusUpper: 'Г',
     engLower: 'u',
     engUpper: 'U',
   },
   {
-    class: 'keyI',
+    class: 'KeyI',
     rusLower: 'ш',
     rusUpper: 'Ш',
     engLower: 'i',
     engUpper: 'I',
   },
   {
-    class: 'keyO',
+    class: 'KeyO',
     rusLower: 'щ',
     rusUpper: 'Щ',
     engLower: 'o',
     engUpper: 'O',
   },
   {
-    class: 'keyP',
+    class: 'KeyP',
     rusLower: 'з',
     rusUpper: 'З',
     engLower: 'p',
     engUpper: 'P',
   },
   {
-    class: 'bracketLeft',
+    class: 'BracketLeft',
     rusLower: 'х',
     rusUpper: 'Х',
     engLower: '[',
     engUpper: '{',
   },
   {
-    class: 'bracketRight',
+    class: 'BracketRight',
     rusLower: 'ъ',
     rusUpper: 'Ъ',
     engLower: ']',
     engUpper: '}',
   },
   {
-    class: 'backslash',
+    class: 'BackSlash',
     rusLower: '\\',
     rusUpper: '/',
     engLower: '\\',
     engUpper: '|',
   },
   {
-    class: 'delete',
+    class: 'Delete',
     rusLower: 'Del',
     rusUpper: 'Del',
     engLower: 'Del',
     engUpper: 'Del',
   },
   {
-    class: 'capsLock',
+    class: 'CapsLock',
     rusLower: 'CapsLock',
     rusUpper: 'CapsLock',
     engLower: 'CapsLock',
     engUpper: 'CapsLock',
   },
   {
-    class: 'keyA',
+    class: 'KeyA',
     rusLower: 'ф',
     rusUpper: 'Ф',
     engLower: 'a',
     engUpper: 'A',
   },
   {
-    class: 'keyS',
+    class: 'KeyS',
     rusLower: 'ы',
     rusUpper: 'Ы',
     engLower: 's',
     engUpper: 'S',
   },
   {
-    class: 'keyD',
+    class: 'KeyD',
     rusLower: 'в',
     rusUpper: 'В',
     engLower: 'd',
     engUpper: 'D',
   },
   {
-    class: 'keyF',
+    class: 'KeyF',
     rusLower: 'а',
     rusUpper: 'А',
     engLower: 'f',
     engUpper: 'F',
   },
   {
-    class: 'keyG',
+    class: 'KeyG',
     rusLower: 'п',
     rusUpper: 'П',
     engLower: 'g',
     engUpper: 'G',
   },
   {
-    class: 'keyH',
+    class: 'KeyH',
     rusLower: 'р',
     rusUpper: 'Р',
     engLower: 'h',
     engUpper: 'H',
   },
   {
-    class: 'keyJ',
+    class: 'KeyJ',
     rusLower: 'о',
     rusUpper: 'О',
     engLower: 'j',
     engUpper: 'J',
   },
   {
-    class: 'keyK',
+    class: 'KeyK',
     rusLower: 'л',
     rusUpper: 'Л',
     engLower: 'k',
     engUpper: 'K',
   },
   {
-    class: 'keyL',
+    class: 'KeyL',
     rusLower: 'д',
     rusUpper: 'Д',
     engLower: 'l',
     engUpper: 'L',
   },
   {
-    class: 'semicolon',
+    class: 'Semicolon',
     rusLower: 'ж',
     rusUpper: 'Ж',
     engLower: ';',
     engUpper: ':',
   },
   {
-    class: 'quote',
+    class: 'Quote',
     rusLower: 'э',
     rusUpper: 'Э',
     engLower: "'",
     engUpper: '"',
   },
   {
-    class: 'enter',
+    class: 'Enter',
     rusLower: 'Enter',
     rusUpper: 'Enter',
     engLower: 'Enter',
     engUpper: 'Enter',
   },
   {
-    class: 'shiftLeft',
+    class: 'ShiftLeft',
     rusLower: 'Shift',
     rusUpper: 'Shift',
     engLower: 'Shift',
     engUpper: 'Shift',
   },
   {
-    class: 'keyZ',
+    class: 'KeyZ',
     rusLower: 'я',
     rusUpper: 'Я',
     engLower: 'z',
     engUpper: 'Z',
   },
   {
-    class: 'keyX',
+    class: 'KeyX',
     rusLower: 'ч',
     rusUpper: 'Ч',
     engLower: 'x',
     engUpper: 'X',
   },
   {
-    class: 'keyC',
+    class: 'KeyC',
     rusLower: 'с',
     rusUpper: 'С',
     engLower: 'c',
     engUpper: 'C',
   },
   {
-    class: 'keyV',
+    class: 'KeyV',
     rusLower: 'м',
     rusUpper: 'М',
     engLower: 'v',
     engUpper: 'V',
   },
   {
-    class: 'keyB',
+    class: 'KeyB',
     rusLower: 'и',
     rusUpper: 'И',
     engLower: 'b',
     engUpper: 'B',
   },
   {
-    class: 'keyN',
+    class: 'KeyN',
     rusLower: 'т',
     rusUpper: 'Т',
     engLower: 'n',
     engUpper: 'N',
   },
   {
-    class: 'keyM',
+    class: 'KeyM',
     rusLower: 'ь',
     rusUpper: 'Ь',
     engLower: 'm',
     engUpper: 'M',
   },
   {
-    class: 'comma',
+    class: 'Comma',
     rusLower: 'б',
     rusUpper: 'Б',
     engLower: ',',
     engUpper: '&lt;',
   },
   {
-    class: 'period',
+    class: 'Period',
     rusLower: 'ю',
     rusUpper: 'Ю',
     engLower: '.',
     engUpper: '&gt;>',
   },
   {
-    class: 'slash',
+    class: 'Slash',
     rusLower: '.',
     rusUpper: ',',
     engLower: '/',
     engUpper: '?',
   },
   {
-    class: 'arrowUp',
+    class: 'ArrowUp',
     rusLower: '▲',
     rusUpper: '▲',
     engLower: '▲',
     engUpper: '▲',
   },
   {
-    class: 'shiftRight',
+    class: 'ShiftRight',
     rusLower: 'Shift',
     rusUpper: 'Shift',
     engLower: 'Shift',
     engUpper: 'Shift',
   },
   {
-    class: 'controlLeft',
+    class: 'ControlLeft',
     rusLower: 'Ctrl',
     rusUpper: 'Ctrl',
     engLower: 'Ctrl',
     engUpper: 'Ctrl',
   },
   {
-    class: 'metaLeft',
+    class: 'MetaLeft',
     rusLower: 'Win',
     rusUpper: 'Win',
     engLower: 'Win',
     engUpper: 'Win',
   },
   {
-    class: 'altLeft',
+    class: 'AltLeft',
     rusLower: 'Alt',
     rusUpper: 'Alt',
     engLower: 'Alt',
     engUpper: 'Alt',
   },
   {
-    class: 'space',
+    class: 'Space',
     rusLower: ' ',
     rusUpper: ' ',
     engLower: ' ',
     engUpper: ' ',
   },
   {
-    class: 'altRight',
+    class: 'AltRight',
     rusLower: 'Alt',
     rusUpper: 'Alt',
     engLower: 'Alt',
     engUpper: 'Alt',
   },
   {
-    class: 'arrowLeft',
+    class: 'ArrowLeft',
     rusLower: '◄',
     rusUpper: '◄',
     engLower: '◄',
     engUpper: '◄',
   },
   {
-    class: 'arrowDown',
+    class: 'ArrowDown',
     rusLower: '▼',
     rusUpper: '▼',
     engLower: '▼',
     engUpper: '▼',
   },
   {
-    class: 'arrowRight',
+    class: 'ArrowRight',
     rusLower: '►',
     rusUpper: '►',
     engLower: '►',
     engUpper: '►',
   },
   {
-    class: 'controlRight',
+    class: 'ControlRight',
     rusLower: 'Ctrl',
     rusUpper: 'Ctrl',
     engLower: 'Ctrl',
@@ -471,8 +470,8 @@ const keyboardSection = document.createElement('section');
 keyboardSection.className = 'keyboard';
 
 /* Начальные значения языка и регистра */
-const lang = false; // false - английский
-const caps = false; // false - строчные
+let lang = false; // false - английский
+let caps = false; // false - строчные
 
 /* Функция создания клавиш и добавления их к родительскому элементу */
 keys.forEach((key) => {
@@ -480,54 +479,40 @@ keys.forEach((key) => {
   button.className = key.class;
 
   const rusSpan = document.createElement('span');
-  if (lang) {
-    rusSpan.className = 'rus';
-  } else {
-    rusSpan.className = 'rus hidden';
-  }
+  if (lang) rusSpan.className = 'rus';
+  else rusSpan.className = 'rus hidden';
 
   const rusLowerSpan = document.createElement('span');
-  if (caps) {
-    rusLowerSpan.className = 'caseDown hidden';
-  } else {
-    rusLowerSpan.className = 'caseDown';
-  }
+  if (caps) rusLowerSpan.className = 'caseDown hidden';
+  else rusLowerSpan.className = 'caseDown';
+
   rusLowerSpan.textContent = key.rusLower;
   rusSpan.appendChild(rusLowerSpan);
 
   const rusUpperSpan = document.createElement('span');
-  if (caps) {
-    rusUpperSpan.className = 'caseUp';
-  } else {
-    rusUpperSpan.className = 'caseUp hidden';
-  }
+  if (caps) rusUpperSpan.className = 'caseUp';
+  else rusUpperSpan.className = 'caseUp hidden';
+
   rusUpperSpan.textContent = key.rusUpper;
   rusSpan.appendChild(rusUpperSpan);
 
   button.appendChild(rusSpan);
 
   const engSpan = document.createElement('span');
-  if (lang) {
-    engSpan.className = 'eng hidden';
-  } else {
-    engSpan.className = 'eng';
-  }
+  if (lang) engSpan.className = 'eng hidden';
+  else engSpan.className = 'eng';
 
   const engLowerSpan = document.createElement('span');
-  if (caps) {
-    engLowerSpan.className = 'caseDown hidden';
-  } else {
-    engLowerSpan.className = 'caseDown';
-  }
+  if (caps) engLowerSpan.className = 'caseDown hidden';
+  else engLowerSpan.className = 'caseDown';
+
   engLowerSpan.textContent = key.engLower;
   engSpan.appendChild(engLowerSpan);
 
   const engUpperSpan = document.createElement('span');
-  if (caps) {
-    engUpperSpan.className = 'caseUp';
-  } else {
-    engUpperSpan.className = 'caseUp hidden';
-  }
+  if (caps) engUpperSpan.className = 'caseUp';
+  else engUpperSpan.className = 'caseUp hidden';
+
   engUpperSpan.textContent = key.engUpper;
   engSpan.appendChild(engUpperSpan);
 
@@ -543,7 +528,7 @@ const p1 = document.createElement('p');
 p1.innerHTML = 'Keyboard was created for operating system Windows';
 
 const p2 = document.createElement('p');
-p2.innerHTML = 'To switch the language use the combination left <code>ctrl</code> + <code>shift</code>';
+p2.innerHTML = 'To switch the language use the combination <code>ctrl</code> + <code>shift</code>';
 
 /* Добавляем элементы на страницу */
 document.body.appendChild(header);
@@ -562,74 +547,74 @@ footer.appendChild(p2);
 const textarea = document.getElementById('textarea');
 const buttons = document.querySelectorAll('.keyboard button');
 
-const capsLock = document.querySelector('.capsLock');
-const shiftLeft = document.querySelector('.shiftLeft');
-const shiftRight = document.querySelector('.shiftRight');
-const backquote = document.querySelector('.backquote');
-const digit1 = document.querySelector('.digit1');
-const digit2 = document.querySelector('.digit2');
-const digit3 = document.querySelector('.digit3');
-const digit4 = document.querySelector('.digit4');
-const digit5 = document.querySelector('.digit5');
-const digit6 = document.querySelector('.digit6');
-const digit7 = document.querySelector('.digit7');
-const digit8 = document.querySelector('.digit8');
-const digit9 = document.querySelector('.digit9');
-const digit0 = document.querySelector('.digit0');
-const minus = document.querySelector('.minus');
-const equal = document.querySelector('.equal');
-const backspace = document.querySelector('.backspace');
-const tab = document.querySelector('.tab');
-const keyQ = document.querySelector('.keyQ');
-const keyW = document.querySelector('.keyW');
-const keyE = document.querySelector('.keyE');
-const keyR = document.querySelector('.keyR');
-const keyT = document.querySelector('.keyT');
-const keyY = document.querySelector('.keyY');
-const keyU = document.querySelector('.keyU');
-const keyI = document.querySelector('.keyI');
-const keyO = document.querySelector('.keyO');
-const keyP = document.querySelector('.keyP');
-const bracketLeft = document.querySelector('.bracketLeft');
-const bracketRight = document.querySelector('.bracketRight');
-const backslash = document.querySelector('.backslash');
-const keydelete = document.querySelector('.delete');
-const keyA = document.querySelector('.keyA');
-const keyS = document.querySelector('.keyS');
-const keyD = document.querySelector('.keyD');
-const keyF = document.querySelector('.keyF');
-const keyG = document.querySelector('.keyG');
-const keyH = document.querySelector('.keyH');
-const keyJ = document.querySelector('.keyJ');
-const keyK = document.querySelector('.keyK');
-const keyL = document.querySelector('.keyL');
-const semicolon = document.querySelector('.semicolon');
-const quote = document.querySelector('.quote');
-const enter = document.querySelector('.enter');
-const keyZ = document.querySelector('.keyZ');
-const keyX = document.querySelector('.keyX');
-const keyC = document.querySelector('.keyC');
-const keyV = document.querySelector('.keyV');
-const keyB = document.querySelector('.keyB');
-const keyN = document.querySelector('.keyN');
-const keyM = document.querySelector('.keyM');
-const comma = document.querySelector('.comma');
-const period = document.querySelector('.period');
-const slash = document.querySelector('.slash');
-const arrowUp = document.querySelector('.arrowUp');
-const controlLeft = document.querySelector('.controlLeft');
-const metaLeft = document.querySelector('.metaLeft');
-const altLeft = document.querySelector('.altLeft');
-const space = document.querySelector('.space');
-const altRight = document.querySelector('.altRight');
-const arrowLeft = document.querySelector('.arrowLeft');
-const arrowDown = document.querySelector('.arrowDown');
-const arrowRight = document.querySelector('.arrowRight');
-const controlRight = document.querySelector('.controlRight');
+const CapsLock = document.querySelector('.CapsLock');
+const ShiftLeft = document.querySelector('.ShiftLeft');
+const ShiftRight = document.querySelector('.ShiftRight');
+const BackQuote = document.querySelector('.BackQuote');
+const Digit1 = document.querySelector('.Digit1');
+const Digit2 = document.querySelector('.Digit2');
+const Digit3 = document.querySelector('.Digit3');
+const Digit4 = document.querySelector('.Digit4');
+const Digit5 = document.querySelector('.Digit5');
+const Digit6 = document.querySelector('.Digit6');
+const Digit7 = document.querySelector('.Digit7');
+const Digit8 = document.querySelector('.Digit8');
+const Digit9 = document.querySelector('.Digit9');
+const Digit0 = document.querySelector('.Digit0');
+const Minus = document.querySelector('.Minus');
+const Equal = document.querySelector('.Equal');
+const BackSpace = document.querySelector('.BackSpace');
+const Tab = document.querySelector('.Tab');
+const KeyQ = document.querySelector('.KeyQ');
+const KeyW = document.querySelector('.KeyW');
+const KeyE = document.querySelector('.KeyE');
+const KeyR = document.querySelector('.KeyR');
+const KeyT = document.querySelector('.KeyT');
+const KeyY = document.querySelector('.KeyY');
+const KeyU = document.querySelector('.KeyU');
+const KeyI = document.querySelector('.KeyI');
+const KeyO = document.querySelector('.KeyO');
+const KeyP = document.querySelector('.KeyP');
+const BracketLeft = document.querySelector('.BracketLeft');
+const BracketRight = document.querySelector('.BracketRight');
+const BackSlash = document.querySelector('.BackSlash');
+const KeyDelete = document.querySelector('.Delete');
+const KeyA = document.querySelector('.KeyA');
+const KeyS = document.querySelector('.KeyS');
+const KeyD = document.querySelector('.KeyD');
+const KeyF = document.querySelector('.KeyF');
+const KeyG = document.querySelector('.KeyG');
+const KeyH = document.querySelector('.KeyH');
+const KeyJ = document.querySelector('.KeyJ');
+const KeyK = document.querySelector('.KeyK');
+const KeyL = document.querySelector('.KeyL');
+const Semicolon = document.querySelector('.Semicolon');
+const Quote = document.querySelector('.Quote');
+const Enter = document.querySelector('.Enter');
+const KeyZ = document.querySelector('.KeyZ');
+const KeyX = document.querySelector('.KeyX');
+const KeyC = document.querySelector('.KeyC');
+const KeyV = document.querySelector('.KeyV');
+const KeyB = document.querySelector('.KeyB');
+const KeyN = document.querySelector('.KeyN');
+const KeyM = document.querySelector('.KeyM');
+const Comma = document.querySelector('.Comma');
+const Period = document.querySelector('.Period');
+const Slash = document.querySelector('.Slash');
+const ArrowUp = document.querySelector('.ArrowUp');
+const ControlLeft = document.querySelector('.ControlLeft');
+const MetaLeft = document.querySelector('.MetaLeft');
+const AltLeft = document.querySelector('.AltLeft');
+const Space = document.querySelector('.Space');
+const AltRight = document.querySelector('.AltRight');
+const ArrowLeft = document.querySelector('.ArrowLeft');
+const ArrowDown = document.querySelector('.ArrowDown');
+const ArrowRight = document.querySelector('.ArrowRight');
+const ControlRight = document.querySelector('.ControlRight');
 
 /* Функция обновления внешнего вида клавиатуры */
 function updateKeyboard() {
-  for (let i = 0; i < buttons.length; i++) {
+  for (let i = 0; i < buttons.length; i += 1) {
     const button = buttons[i];
     const eng = button.querySelector('.eng');
     const rus = button.querySelector('.rus');
@@ -661,1317 +646,2140 @@ function updateKeyboard() {
   }
 }
 
-/* Обработчик нажатия клавиш ctrl + shift */
+/* Обработчик нажатия клавиш */
 document.addEventListener('keydown', (event) => {
   if (event.ctrlKey && event.shiftKey) {
+    event.preventDefault();
     lang = !lang;
     updateKeyboard();
   }
-});
-
-/* Обработчик нажатия клавиши CapsLock */
-document.addEventListener('keydown', (event) => {
   if (event.code === 'CapsLock') {
     caps = !caps;
+    if (caps) CapsLock.classList.add('active');
+    else CapsLock.classList.remove('active');
+    updateKeyboard();
+  }
+  if (event.code === 'ShiftLeft') {
+    caps = !caps;
+    ShiftLeft.classList.add('active');
+    updateKeyboard();
+  }
+  if (event.code === 'ShiftRight') {
+    caps = !caps;
+    ShiftRight.classList.add('active');
+    updateKeyboard();
+  }
+  if (event.code === 'Backquote') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'BackQuote').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'BackQuote').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'BackQuote').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'BackQuote').engLower;
+    }
+    BackQuote.classList.add('active');
+  }
+  if (event.code === 'Digit1') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'Digit1').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'Digit1').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit1').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'Digit1').engLower;
+    }
+    Digit1.classList.add('active');
+  }
+  if (event.code === 'Digit2') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'Digit2').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'Digit2').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit2').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'Digit2').engLower;
+    }
+    Digit2.classList.add('active');
+  }
+  if (event.code === 'Digit3') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'Digit3').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'Digit3').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit3').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'Digit3').engLower;
+    }
+    Digit3.classList.add('active');
+  }
+  if (event.code === 'Digit4') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'Digit4').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'Digit4').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit4').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'Digit4').engLower;
+    }
+    Digit4.classList.add('active');
+  }
+  if (event.code === 'Digit5') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'Digit5').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'Digit5').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit5').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'Digit5').engLower;
+    }
+    Digit5.classList.add('active');
+  }
+  if (event.code === 'Digit6') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'Digit6').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'Digit6').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit6').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'Digit6').engLower;
+    }
+    Digit6.classList.add('active');
+  }
+  if (event.code === 'Digit7') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'Digit7').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'Digit7').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit7').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'Digit7').engLower;
+    }
+    Digit7.classList.add('active');
+  }
+  if (event.code === 'Digit8') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'Digit8').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'Digit8').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit8').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'Digit8').engLower;
+    }
+    Digit8.classList.add('active');
+  }
+  if (event.code === 'Digit9') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'Digit9').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'Digit9').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit9').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'Digit9').engLower;
+    }
+    Digit9.classList.add('active');
+  }
+  if (event.code === 'Digit0') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'Digit0').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'Digit0').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit0').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'Digit0').engLower;
+    }
+    Digit0.classList.add('active');
+  }
+  if (event.code === 'Minus') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'Minus').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'Minus').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Minus').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'Minus').engLower;
+    }
+    Minus.classList.add('active');
+  }
+  if (event.code === 'Equal') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'Equal').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'Equal').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Equal').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'Equal').engLower;
+    }
+    Equal.classList.add('active');
+  }
+  if (event.code === 'KeyQ') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyQ').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyQ').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyQ').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyQ').engLower;
+    }
+    KeyQ.classList.add('active');
+  }
+  if (event.code === 'KeyW') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyW').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyW').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyW').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyW').engLower;
+    }
+    KeyW.classList.add('active');
+  }
+  if (event.code === 'KeyE') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyE').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyE').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyE').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyE').engLower;
+    }
+    KeyE.classList.add('active');
+  }
+  if (event.code === 'KeyR') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyR').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyR').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyR').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyR').engLower;
+    }
+    KeyR.classList.add('active');
+  }
+  if (event.code === 'KeyT') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyT').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyT').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyT').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyT').engLower;
+    }
+    KeyT.classList.add('active');
+  }
+  if (event.code === 'KeyY') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyY').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyY').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyY').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyY').engLower;
+    }
+    KeyY.classList.add('active');
+  }
+  if (event.code === 'KeyU') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyU').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyU').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyU').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyU').engLower;
+    }
+    KeyU.classList.add('active');
+  }
+  if (event.code === 'KeyI') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyI').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyI').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyI').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyI').engLower;
+    }
+    KeyI.classList.add('active');
+  }
+  if (event.code === 'KeyO') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyO').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyO').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyO').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyO').engLower;
+    }
+    KeyO.classList.add('active');
+  }
+  if (event.code === 'KeyP') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyP').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyP').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyP').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyP').engLower;
+    }
+    KeyP.classList.add('active');
+  }
+  if (event.code === 'KeyA') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyA').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyA').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyA').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyA').engLower;
+    }
+    KeyA.classList.add('active');
+  }
+  if (event.code === 'KeyS') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyS').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyS').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyS').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyS').engLower;
+    }
+    KeyS.classList.add('active');
+  }
+  if (event.code === 'KeyD') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyD').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyD').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyD').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyD').engLower;
+    }
+    KeyD.classList.add('active');
+  }
+  if (event.code === 'KeyF') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyF').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyF').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyF').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyF').engLower;
+    }
+    KeyF.classList.add('active');
+  }
+  if (event.code === 'KeyG') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyG').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyG').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyG').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyG').engLower;
+    }
+    KeyG.classList.add('active');
+  }
+  if (event.code === 'KeyH') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyH').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyH').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyH').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyH').engLower;
+    }
+    KeyH.classList.add('active');
+  }
+  if (event.code === 'KeyJ') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyJ').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyJ').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyJ').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyJ').engLower;
+    }
+    KeyJ.classList.add('active');
+  }
+  if (event.code === 'KeyK') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyK').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyK').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyK').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyK').engLower;
+    }
+    KeyK.classList.add('active');
+  }
+  if (event.code === 'KeyL') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyL').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyL').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyL').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyL').engLower;
+    }
+    KeyL.classList.add('active');
+  }
+  if (event.code === 'KeyZ') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyZ').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyZ').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyZ').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyZ').engLower;
+    }
+    KeyZ.classList.add('active');
+  }
+  if (event.code === 'KeyX') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyX').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyX').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyX').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyX').engLower;
+    }
+    KeyX.classList.add('active');
+  }
+  if (event.code === 'KeyC') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyC').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyC').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyC').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyC').engLower;
+    }
+    KeyC.classList.add('active');
+  }
+  if (event.code === 'KeyV') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyV').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyV').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyV').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyV').engLower;
+    }
+    KeyV.classList.add('active');
+  }
+  if (event.code === 'KeyB') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyB').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyB').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyB').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyB').engLower;
+    }
+    KeyB.classList.add('active');
+  }
+  if (event.code === 'KeyN') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyN').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyN').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyN').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyN').engLower;
+    }
+    KeyN.classList.add('active');
+  }
+  if (event.code === 'KeyM') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'KeyM').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'KeyM').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyM').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'KeyM').engLower;
+    }
+    KeyM.classList.add('active');
+  }
+  if (event.code === 'BracketLeft') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'BracketLeft').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'BracketLeft').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'BracketLeft').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'BracketLeft').engLower;
+    }
+    BracketLeft.classList.add('active');
+  }
+  if (event.code === 'BracketRight') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'BracketRight').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'BracketRight').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'BracketRight').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'BracketRight').engLower;
+    }
+    BracketRight.classList.add('active');
+  }
+  if (event.code === 'BackSlash') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'BackSlash').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'BackSlash').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'BackSlash').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'BackSlash').engLower;
+    }
+    BackSlash.classList.add('active');
+  }
+  if (event.code === 'Semicolon') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'Semicolon').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'Semicolon').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Semicolon').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'Semicolon').engLower;
+    }
+    Semicolon.classList.add('active');
+  }
+  if (event.code === 'Quote') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'Quote').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'Quote').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Quote').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'Quote').engLower;
+    }
+    Quote.classList.add('active');
+  }
+  if (event.code === 'Comma') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'Comma').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'Comma').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Comma').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'Comma').engLower;
+    }
+    Comma.classList.add('active');
+  }
+  if (event.code === 'Period') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'Period').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'Period').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Period').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'Period').engLower;
+    }
+    Period.classList.add('active');
+  }
+  if (event.code === 'Slash') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'Slash').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'Slash').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Slash').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'Slash').engLower;
+    }
+    Slash.classList.add('active');
+  }
+  if (event.code === 'ArrowUp') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'ArrowUp').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'ArrowUp').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'ArrowUp').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'ArrowUp').engLower;
+    }
+    ArrowUp.classList.add('active');
+  }
+  if (event.code === 'ArrowDown') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'ArrowDown').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'ArrowDown').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'ArrowDown').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'ArrowDown').engLower;
+    }
+    ArrowDown.classList.add('active');
+  }
+  if (event.code === 'ArrowLeft') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'ArrowLeft').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'ArrowLeft').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'ArrowLeft').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'ArrowLeft').engLower;
+    }
+    ArrowLeft.classList.add('active');
+  }
+  if (event.code === 'ArrowRight') {
+    event.preventDefault();
+    if (lang) {
+      if (caps) {
+        textarea.value += keys.find((key) => key.class === 'ArrowRight').rusUpper;
+      } else {
+        textarea.value += keys.find((key) => key.class === 'ArrowRight').rusLower;
+      }
+    } else if (caps) {
+      textarea.value += keys.find((key) => key.class === 'ArrowRight').engUpper;
+    } else {
+      textarea.value += keys.find((key) => key.class === 'ArrowRight').engLower;
+    }
+    ArrowRight.classList.add('active');
+  }
+  if (event.code === 'Space') {
+    event.preventDefault();
+    textarea.value += ' ';
+    Space.classList.add('active');
+  }
+  if (event.code === 'Backspace') {
+    event.preventDefault();
+    const cursorPosition = textarea.selectionStart;
+    if (cursorPosition > 0) {
+      const textBeforeCursor = textarea.value.slice(0, cursorPosition);
+      const textAfterCursor = textarea.value.slice(cursorPosition);
+      const updatedText = textBeforeCursor.slice(0, -1) + textAfterCursor;
+      textarea.value = updatedText;
+      textarea.selectionStart = cursorPosition - 1;
+      textarea.selectionEnd = cursorPosition - 1;
+    }
+    BackSpace.classList.add('active');
+  }
+  if (event.code === 'Tab') {
+    event.preventDefault();
+    textarea.setRangeText('\t', textarea.selectionStart, textarea.selectionEnd, 'end');
+    Tab.classList.add('active');
+  }
+  if (event.code === 'Delete') {
+    event.preventDefault();
+    const start = textarea.selectionStart;
+    textarea.value = textarea.value.slice(0, start) + textarea.value.slice(start + 1);
+    textarea.setSelectionRange(start, start);
+    KeyDelete.classList.add('active');
+  }
+  if (event.code === 'Enter') {
+    event.preventDefault();
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    textarea.value = `${textarea.value.slice(0, start)}\n${textarea.value.slice(end)}`;
+    textarea.setSelectionRange(start + 1, start + 1);
+    Enter.classList.add('active');
+  }
+  if (event.code === 'MetaLeft') {
+    MetaLeft.classList.add('active');
+  }
+  if (event.code === 'ControlLeft') {
+    ControlLeft.classList.add('active');
+  }
+  if (event.code === 'AltLeft') {
+    event.preventDefault();
+    AltLeft.classList.add('active');
+  }
+  if (event.code === 'AltRight') {
+    event.preventDefault();
+    AltRight.classList.add('active');
+  }
+  if (event.code === 'ControlRight') {
+    ControlRight.classList.add('active');
+  }
+});
+document.addEventListener('keyup', (event) => {
+  if (event.ctrlKey && event.shiftKey) {
+    event.preventDefault();
+  }
+  if (event.code === 'CapsLock') {
+    event.preventDefault();
+  }
+  if (event.code === 'ShiftLeft') {
+    caps = !caps;
+    ShiftLeft.classList.remove('active');
+    updateKeyboard();
+  }
+  if (event.code === 'ShiftRight') {
+    caps = !caps;
+    ShiftRight.classList.remove('active');
+    updateKeyboard();
+  }
+  if (event.code === 'BackQuote') {
+    event.preventDefault();
+    BackQuote.classList.remove('active');
+  }
+  if (event.code === 'Digit1') {
+    event.preventDefault();
+    Digit1.classList.remove('active');
+  }
+  if (event.code === 'Digit2') {
+    event.preventDefault();
+    Digit2.classList.remove('active');
+  }
+  if (event.code === 'Digit3') {
+    event.preventDefault();
+    Digit3.classList.remove('active');
+  }
+  if (event.code === 'Digit4') {
+    event.preventDefault();
+    Digit4.classList.remove('active');
+  }
+  if (event.code === 'Digit5') {
+    event.preventDefault();
+    Digit5.classList.remove('active');
+  }
+  if (event.code === 'Digit6') {
+    event.preventDefault();
+    Digit6.classList.remove('active');
+  }
+  if (event.code === 'Digit7') {
+    event.preventDefault();
+    Digit7.classList.remove('active');
+  }
+  if (event.code === 'Digit8') {
+    event.preventDefault();
+    Digit8.classList.remove('active');
+  }
+  if (event.code === 'Digit9') {
+    event.preventDefault();
+    Digit9.classList.remove('active');
+  }
+  if (event.code === 'Digit0') {
+    event.preventDefault();
+    Digit0.classList.remove('active');
+  }
+  if (event.code === 'Minus') {
+    event.preventDefault();
+    Minus.classList.remove('active');
+  }
+  if (event.code === 'Equal') {
+    event.preventDefault();
+    Equal.classList.remove('active');
+  }
+  if (event.code === 'KeyQ') {
+    event.preventDefault();
+    KeyQ.classList.remove('active');
+  }
+  if (event.code === 'KeyW') {
+    event.preventDefault();
+    KeyW.classList.remove('active');
+  }
+  if (event.code === 'KeyE') {
+    event.preventDefault();
+    KeyE.classList.remove('active');
+  }
+  if (event.code === 'KeyR') {
+    event.preventDefault();
+    KeyR.classList.remove('active');
+  }
+  if (event.code === 'KeyT') {
+    event.preventDefault();
+    KeyT.classList.remove('active');
+  }
+  if (event.code === 'KeyY') {
+    event.preventDefault();
+    KeyY.classList.remove('active');
+  }
+  if (event.code === 'KeyU') {
+    event.preventDefault();
+    KeyU.classList.remove('active');
+  }
+  if (event.code === 'KeyI') {
+    event.preventDefault();
+    KeyI.classList.remove('active');
+  }
+  if (event.code === 'KeyO') {
+    event.preventDefault();
+    KeyO.classList.remove('active');
+  }
+  if (event.code === 'KeyP') {
+    event.preventDefault();
+    KeyP.classList.remove('active');
+  }
+  if (event.code === 'KeyA') {
+    event.preventDefault();
+    KeyA.classList.remove('active');
+  }
+  if (event.code === 'KeyS') {
+    event.preventDefault();
+    KeyS.classList.remove('active');
+  }
+  if (event.code === 'KeyD') {
+    event.preventDefault();
+    KeyD.classList.remove('active');
+  }
+  if (event.code === 'KeyF') {
+    event.preventDefault();
+    KeyF.classList.remove('active');
+  }
+  if (event.code === 'KeyG') {
+    event.preventDefault();
+    KeyG.classList.remove('active');
+  }
+  if (event.code === 'KeyH') {
+    event.preventDefault();
+    KeyH.classList.remove('active');
+  }
+  if (event.code === 'KeyJ') {
+    event.preventDefault();
+    KeyJ.classList.remove('active');
+  }
+  if (event.code === 'KeyK') {
+    event.preventDefault();
+    KeyK.classList.remove('active');
+  }
+  if (event.code === 'KeyL') {
+    event.preventDefault();
+    KeyL.classList.remove('active');
+  }
+  if (event.code === 'KeyZ') {
+    event.preventDefault();
+    KeyZ.classList.remove('active');
+  }
+  if (event.code === 'KeyX') {
+    event.preventDefault();
+    KeyX.classList.remove('active');
+  }
+  if (event.code === 'KeyC') {
+    event.preventDefault();
+    KeyC.classList.remove('active');
+  }
+  if (event.code === 'KeyV') {
+    event.preventDefault();
+    KeyV.classList.remove('active');
+  }
+  if (event.code === 'KeyB') {
+    event.preventDefault();
+    KeyB.classList.remove('active');
+  }
+  if (event.code === 'KeyN') {
+    event.preventDefault();
+    KeyN.classList.remove('active');
+  }
+  if (event.code === 'KeyM') {
+    event.preventDefault();
+    KeyM.classList.remove('active');
+  }
+  if (event.code === 'BracketLeft') {
+    event.preventDefault();
+    BracketLeft.classList.remove('active');
+  }
+  if (event.code === 'BracketRight') {
+    event.preventDefault();
+    BracketRight.classList.remove('active');
+  }
+  if (event.code === 'BackSlash') {
+    event.preventDefault();
+    BackSlash.classList.remove('active');
+  }
+  if (event.code === 'Semicolon') {
+    event.preventDefault();
+    Semicolon.classList.remove('active');
+  }
+  if (event.code === 'Quote') {
+    event.preventDefault();
+    Quote.classList.remove('active');
+  }
+  if (event.code === 'Comma') {
+    event.preventDefault();
+    Comma.classList.remove('active');
+  }
+  if (event.code === 'Period') {
+    event.preventDefault();
+    Period.classList.remove('active');
+  }
+  if (event.code === 'Slash') {
+    event.preventDefault();
+    Slash.classList.remove('active');
+  }
+  if (event.code === 'ArrowUp') {
+    event.preventDefault();
+    ArrowUp.classList.remove('active');
+  }
+  if (event.code === 'ArrowDown') {
+    event.preventDefault();
+    ArrowDown.classList.remove('active');
+  }
+  if (event.code === 'ArrowLeft') {
+    event.preventDefault();
+    ArrowLeft.classList.remove('active');
+  }
+  if (event.code === 'ArrowRight') {
+    event.preventDefault();
+    ArrowRight.classList.remove('active');
+  }
+  if (event.code === 'Space') {
+    event.preventDefault();
+    Space.classList.remove('active');
+  }
+  if (event.code === 'Backspace') {
+    event.preventDefault();
+    BackSpace.classList.remove('active');
+  }
+  if (event.code === 'Tab') {
+    event.preventDefault();
+    Tab.classList.remove('active');
+  }
+  if (event.code === 'Delete') {
+    event.preventDefault();
+    KeyDelete.classList.remove('active');
+  }
+  if (event.code === 'Enter') {
+    event.preventDefault();
+    Enter.classList.remove('active');
+  }
+  if (event.code === 'MetaLeft') {
+    MetaLeft.classList.remove('active');
+  }
+  if (event.code === 'ControlLeft') {
+    ControlLeft.classList.remove('active');
+  }
+  if (event.code === 'AltLeft') {
+    event.preventDefault();
+    AltLeft.classList.remove('active');
+  }
+  if (event.code === 'AltRight') {
+    event.preventDefault();
+    AltRight.classList.remove('active');
+  }
+  if (event.code === 'ControlRight') {
+    ControlRight.classList.remove('active');
+  }
+});
+
+/* Обработчики мыши */
+BackQuote.addEventListener('mousedown', () => {
+  if (lang) {
     if (caps) {
-      capsLock.classList.add('active');
+      textarea.value += keys.find((key) => key.class === 'BackQuote').rusUpper;
     } else {
-      capsLock.classList.remove('active');
+      textarea.value += keys.find((key) => key.class === 'BackQuote').rusLower;
     }
-    updateKeyboard();
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'BackQuote').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'BackQuote').engLower;
   }
+  BackQuote.classList.add('active');
+});
+BackQuote.addEventListener('mouseup', () => {
+  BackQuote.classList.remove('active');
 });
 
-/* Обработчик нажатия клавиши ShiftLeft */
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'ShiftLeft') {
-    caps = !caps;
-    shiftLeft.classList.add('active');
-    updateKeyboard();
-  }
-});
-/* Обработчик отпускания клавиши ShiftLeft */
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'ShiftLeft') {
-    caps = !caps;
-    shiftLeft.classList.remove('active');
-    updateKeyboard();
-  }
-});
-
-/* Обработчик нажатия клавиши ShiftRight */
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'ShiftRight') {
-    caps = !caps;
-    shiftRight.classList.add('active');
-    updateKeyboard();
-  }
-});
-/* Обработчик отпускания клавиши ShiftRight */
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'ShiftRight') {
-    caps = !caps;
-    shiftRight.classList.remove('active');
-    updateKeyboard();
-  }
-});
-
-/* Обработчики буквенно-цифровых клавиш */
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Backquote') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'backquote').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'backquote').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'backquote').engUpper;
+Digit1.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit1').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'backquote').engLower;
+      textarea.value += keys.find((key) => key.class === 'Digit1').rusLower;
     }
-    backquote.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'Digit1').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'Digit1').engLower;
   }
+  Digit1.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Backquote') {
-    event.preventDefault();
-    backquote.classList.remove('active');
-  }
+Digit1.addEventListener('mouseup', () => {
+  Digit1.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Digit1') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'digit1').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'digit1').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'digit1').engUpper;
+Digit2.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit2').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'digit1').engLower;
+      textarea.value += keys.find((key) => key.class === 'Digit2').rusLower;
     }
-    digit1.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'Digit2').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'Digit2').engLower;
   }
+  Digit2.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Digit1') {
-    event.preventDefault();
-    digit1.classList.remove('active');
-  }
+Digit2.addEventListener('mouseup', () => {
+  Digit2.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Digit2') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'digit2').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'digit2').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'digit2').engUpper;
+Digit3.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit3').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'digit2').engLower;
+      textarea.value += keys.find((key) => key.class === 'Digit3').rusLower;
     }
-    digit2.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'Digit3').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'Digit3').engLower;
   }
+  Digit3.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Digit2') {
-    event.preventDefault();
-    digit2.classList.remove('active');
-  }
+Digit3.addEventListener('mouseup', () => {
+  Digit3.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Digit3') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'digit3').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'digit3').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'digit3').engUpper;
+Digit4.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit4').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'digit3').engLower;
+      textarea.value += keys.find((key) => key.class === 'Digit4').rusLower;
     }
-    digit3.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'Digit4').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'Digit4').engLower;
   }
+  Digit4.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Digit3') {
-    event.preventDefault();
-    digit3.classList.remove('active');
-  }
+Digit4.addEventListener('mouseup', () => {
+  Digit4.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Digit4') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'digit4').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'digit4').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'digit4').engUpper;
+Digit5.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit5').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'digit4').engLower;
+      textarea.value += keys.find((key) => key.class === 'Digit5').rusLower;
     }
-    digit4.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'Digit5').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'Digit5').engLower;
   }
+  Digit5.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Digit4') {
-    event.preventDefault();
-    digit4.classList.remove('active');
-  }
+Digit5.addEventListener('mouseup', () => {
+  Digit5.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Digit5') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'digit5').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'digit5').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'digit5').engUpper;
+Digit6.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit6').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'digit5').engLower;
+      textarea.value += keys.find((key) => key.class === 'Digit6').rusLower;
     }
-    digit5.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'Digit6').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'Digit6').engLower;
   }
+  Digit6.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Digit5') {
-    event.preventDefault();
-    digit5.classList.remove('active');
-  }
+Digit6.addEventListener('mouseup', () => {
+  Digit6.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Digit6') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'digit6').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'digit6').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'digit6').engUpper;
+Digit7.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit7').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'digit6').engLower;
+      textarea.value += keys.find((key) => key.class === 'Digit7').rusLower;
     }
-    digit6.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'Digit7').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'Digit7').engLower;
   }
+  Digit7.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Digit6') {
-    event.preventDefault();
-    digit6.classList.remove('active');
-  }
+Digit7.addEventListener('mouseup', () => {
+  Digit7.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Digit7') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'digit7').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'digit7').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'digit7').engUpper;
+Digit8.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit8').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'digit7').engLower;
+      textarea.value += keys.find((key) => key.class === 'Digit8').rusLower;
     }
-    digit7.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'Digit8').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'Digit8').engLower;
   }
+  Digit8.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Digit7') {
-    event.preventDefault();
-    digit7.classList.remove('active');
-  }
+Digit8.addEventListener('mouseup', () => {
+  Digit8.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Digit8') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'digit8').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'digit8').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'digit8').engUpper;
+Digit9.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit9').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'digit8').engLower;
+      textarea.value += keys.find((key) => key.class === 'Digit9').rusLower;
     }
-    digit8.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'Digit9').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'Digit9').engLower;
   }
+  Digit9.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Digit8') {
-    event.preventDefault();
-    digit8.classList.remove('active');
-  }
+Digit9.addEventListener('mouseup', () => {
+  Digit9.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Digit9') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'digit9').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'digit9').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'digit9').engUpper;
+Digit0.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Digit0').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'digit9').engLower;
+      textarea.value += keys.find((key) => key.class === 'Digit0').rusLower;
     }
-    digit9.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'Digit0').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'Digit0').engLower;
   }
+  Digit0.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Digit9') {
-    event.preventDefault();
-    digit9.classList.remove('active');
-  }
+Digit0.addEventListener('mouseup', () => {
+  Digit0.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Digit0') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'digit0').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'digit0').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'digit0').engUpper;
+Minus.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Minus').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'digit0').engLower;
+      textarea.value += keys.find((key) => key.class === 'Minus').rusLower;
     }
-    digit0.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'Minus').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'Minus').engLower;
   }
+  Minus.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Digit0') {
-    event.preventDefault();
-    digit0.classList.remove('active');
-  }
+Minus.addEventListener('mouseup', () => {
+  Minus.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Minus') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'minus').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'minus').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'minus').engUpper;
+Equal.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Equal').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'minus').engLower;
+      textarea.value += keys.find((key) => key.class === 'Equal').rusLower;
     }
-    minus.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'Equal').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'Equal').engLower;
   }
+  Equal.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Minus') {
-    event.preventDefault();
-    minus.classList.remove('active');
-  }
+Equal.addEventListener('mouseup', () => {
+  Equal.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Equal') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'equal').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'equal').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'equal').engUpper;
+KeyQ.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyQ').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'equal').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyQ').rusLower;
     }
-    equal.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyQ').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyQ').engLower;
   }
+  KeyQ.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Equal') {
-    event.preventDefault();
-    equal.classList.remove('active');
-  }
+KeyQ.addEventListener('mouseup', () => {
+  KeyQ.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyQ') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyQ').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyQ').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyQ').engUpper;
+KeyW.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyW').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyQ').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyW').rusLower;
     }
-    keyQ.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyW').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyW').engLower;
   }
+  KeyW.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyQ') {
-    event.preventDefault();
-    keyQ.classList.remove('active');
-  }
+KeyW.addEventListener('mouseup', () => {
+  KeyW.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyW') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyW').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyW').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyW').engUpper;
+KeyE.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyE').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyW').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyE').rusLower;
     }
-    keyW.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyE').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyE').engLower;
   }
+  KeyE.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyW') {
-    event.preventDefault();
-    keyW.classList.remove('active');
-  }
+KeyE.addEventListener('mouseup', () => {
+  KeyE.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyE') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyE').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyE').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyE').engUpper;
+KeyR.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyR').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyE').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyR').rusLower;
     }
-    keyE.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyR').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyR').engLower;
   }
+  KeyR.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyE') {
-    event.preventDefault();
-    keyE.classList.remove('active');
-  }
+KeyR.addEventListener('mouseup', () => {
+  KeyR.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyR') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyR').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyR').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyR').engUpper;
+KeyT.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyT').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyR').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyT').rusLower;
     }
-    keyR.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyT').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyT').engLower;
   }
+  KeyT.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyR') {
-    event.preventDefault();
-    keyR.classList.remove('active');
-  }
+KeyT.addEventListener('mouseup', () => {
+  KeyT.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyT') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyT').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyT').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyT').engUpper;
+KeyY.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyY').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyT').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyY').rusLower;
     }
-    keyT.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyY').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyY').engLower;
   }
+  KeyY.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyT') {
-    event.preventDefault();
-    keyT.classList.remove('active');
-  }
+KeyY.addEventListener('mouseup', () => {
+  KeyY.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyY') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyY').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyY').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyY').engUpper;
+KeyU.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyU').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyY').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyU').rusLower;
     }
-    keyY.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyU').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyU').engLower;
   }
+  KeyU.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyY') {
-    event.preventDefault();
-    keyY.classList.remove('active');
-  }
+KeyU.addEventListener('mouseup', () => {
+  KeyU.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyU') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyU').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyU').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyU').engUpper;
+KeyI.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyI').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyU').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyI').rusLower;
     }
-    keyU.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyI').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyI').engLower;
   }
+  KeyI.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyU') {
-    event.preventDefault();
-    keyU.classList.remove('active');
-  }
+KeyI.addEventListener('mouseup', () => {
+  KeyI.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyI') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyI').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyI').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyI').engUpper;
+KeyO.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyO').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyI').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyO').rusLower;
     }
-    keyI.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyO').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyO').engLower;
   }
+  KeyO.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyI') {
-    event.preventDefault();
-    keyI.classList.remove('active');
-  }
+KeyO.addEventListener('mouseup', () => {
+  KeyO.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyO') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyO').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyO').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyO').engUpper;
+KeyP.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyP').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyO').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyP').rusLower;
     }
-    keyO.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyP').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyP').engLower;
   }
+  KeyP.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyO') {
-    event.preventDefault();
-    keyO.classList.remove('active');
-  }
+KeyP.addEventListener('mouseup', () => {
+  KeyP.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyP') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyP').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyP').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyP').engUpper;
+BracketLeft.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'BracketLeft').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyP').engLower;
+      textarea.value += keys.find((key) => key.class === 'BracketLeft').rusLower;
     }
-    keyP.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'BracketLeft').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'BracketLeft').engLower;
   }
+  BracketLeft.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyP') {
-    event.preventDefault();
-    keyP.classList.remove('active');
-  }
+BracketLeft.addEventListener('mouseup', () => {
+  BracketLeft.classList.remove('active');
 });
-
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyA') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyA').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyA').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyA').engUpper;
+BracketRight.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'BracketRight').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyA').engLower;
+      textarea.value += keys.find((key) => key.class === 'BracketRight').rusLower;
     }
-    keyA.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'BracketRight').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'BracketRight').engLower;
   }
+  BracketRight.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyA') {
-    event.preventDefault();
-    keyA.classList.remove('active');
-  }
+BracketRight.addEventListener('mouseup', () => {
+  BracketRight.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyS') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyS').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyS').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyS').engUpper;
+BackSlash.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'BackSlash').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyS').engLower;
+      textarea.value += keys.find((key) => key.class === 'BackSlash').rusLower;
     }
-    keyS.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'BackSlash').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'BackSlash').engLower;
   }
+  BackSlash.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyS') {
-    event.preventDefault();
-    keyS.classList.remove('active');
-  }
+BackSlash.addEventListener('mouseup', () => {
+  BackSlash.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyD') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyD').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyD').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyD').engUpper;
+KeyA.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyA').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyD').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyA').rusLower;
     }
-    keyD.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyA').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyA').engLower;
   }
+  KeyA.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyD') {
-    event.preventDefault();
-    keyD.classList.remove('active');
-  }
+KeyA.addEventListener('mouseup', () => {
+  KeyA.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyF') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyF').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyF').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyF').engUpper;
+KeyS.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyS').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyF').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyS').rusLower;
     }
-    keyF.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyS').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyS').engLower;
   }
+  KeyS.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyF') {
-    event.preventDefault();
-    keyF.classList.remove('active');
-  }
+KeyS.addEventListener('mouseup', () => {
+  KeyS.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyG') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyG').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyG').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyG').engUpper;
+KeyD.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyD').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyG').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyD').rusLower;
     }
-    keyG.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyD').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyD').engLower;
   }
+  KeyD.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyG') {
-    event.preventDefault();
-    keyG.classList.remove('active');
-  }
+KeyD.addEventListener('mouseup', () => {
+  KeyD.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyH') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyH').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyH').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyH').engUpper;
+KeyF.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyF').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyH').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyF').rusLower;
     }
-    keyH.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyF').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyF').engLower;
   }
+  KeyF.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyH') {
-    event.preventDefault();
-    keyH.classList.remove('active');
-  }
+KeyF.addEventListener('mouseup', () => {
+  KeyF.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyJ') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyJ').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyJ').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyJ').engUpper;
+KeyG.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyG').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyJ').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyG').rusLower;
     }
-    keyJ.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyG').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyG').engLower;
   }
+  KeyG.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyJ') {
-    event.preventDefault();
-    keyJ.classList.remove('active');
-  }
+KeyG.addEventListener('mouseup', () => {
+  KeyG.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyK') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyK').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyK').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyK').engUpper;
+KeyH.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyH').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyK').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyH').rusLower;
     }
-    keyK.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyH').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyH').engLower;
   }
+  KeyH.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyK') {
-    event.preventDefault();
-    keyK.classList.remove('active');
-  }
+KeyH.addEventListener('mouseup', () => {
+  KeyH.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyL') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyL').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyL').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyL').engUpper;
+KeyJ.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyJ').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyL').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyJ').rusLower;
     }
-    keyL.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyJ').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyJ').engLower;
   }
+  KeyJ.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyL') {
-    event.preventDefault();
-    keyL.classList.remove('active');
-  }
+KeyJ.addEventListener('mouseup', () => {
+  KeyJ.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyZ') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyZ').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyZ').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyZ').engUpper;
+KeyK.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyK').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyZ').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyK').rusLower;
     }
-    keyZ.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyK').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyK').engLower;
   }
+  KeyK.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyZ') {
-    event.preventDefault();
-    keyZ.classList.remove('active');
-  }
+KeyK.addEventListener('mouseup', () => {
+  KeyK.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyX') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyX').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyX').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyX').engUpper;
+KeyL.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyL').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyX').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyL').rusLower;
     }
-    keyX.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyL').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyL').engLower;
   }
+  KeyL.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyX') {
-    event.preventDefault();
-    keyX.classList.remove('active');
-  }
+KeyL.addEventListener('mouseup', () => {
+  KeyL.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyC') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyC').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyC').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyC').engUpper;
+Semicolon.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Semicolon').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyC').engLower;
+      textarea.value += keys.find((key) => key.class === 'Semicolon').rusLower;
     }
-    keyC.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'Semicolon').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'Semicolon').engLower;
   }
+  Semicolon.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyC') {
-    event.preventDefault();
-    keyC.classList.remove('active');
-  }
+Semicolon.addEventListener('mouseup', () => {
+  Semicolon.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyV') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyV').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyV').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyV').engUpper;
+Quote.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Quote').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyV').engLower;
+      textarea.value += keys.find((key) => key.class === 'Quote').rusLower;
     }
-    keyV.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'Quote').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'Quote').engLower;
   }
+  Quote.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyV') {
-    event.preventDefault();
-    keyV.classList.remove('active');
-  }
+Quote.addEventListener('mouseup', () => {
+  Quote.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyB') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyB').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyB').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyB').engUpper;
+KeyZ.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyZ').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyB').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyZ').rusLower;
     }
-    keyB.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyZ').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyZ').engLower;
   }
+  KeyZ.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyB') {
-    event.preventDefault();
-    keyB.classList.remove('active');
-  }
+KeyZ.addEventListener('mouseup', () => {
+  KeyZ.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyN') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyN').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyN').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyN').engUpper;
+KeyX.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyX').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyN').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyX').rusLower;
     }
-    keyN.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyX').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyX').engLower;
   }
+  KeyX.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyN') {
-    event.preventDefault();
-    keyN.classList.remove('active');
-  }
+KeyX.addEventListener('mouseup', () => {
+  KeyX.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'KeyM') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'keyM').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'keyM').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'keyM').engUpper;
+KeyC.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyC').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'keyM').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyC').rusLower;
     }
-    keyM.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyC').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyC').engLower;
   }
+  KeyC.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'KeyM') {
-    event.preventDefault();
-    keyM.classList.remove('active');
-  }
+KeyC.addEventListener('mouseup', () => {
+  KeyC.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'BracketLeft') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'bracketLeft').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'bracketLeft').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'bracketLeft').engUpper;
+KeyV.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyV').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'bracketLeft').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyV').rusLower;
     }
-    bracketLeft.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyV').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyV').engLower;
   }
+  KeyV.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'BracketLeft') {
-    event.preventDefault();
-    bracketLeft.classList.remove('active');
-  }
+KeyV.addEventListener('mouseup', () => {
+  KeyV.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'BracketRight') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'bracketRight').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'bracketRight').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'bracketRight').engUpper;
+KeyB.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyB').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'bracketRight').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyB').rusLower;
     }
-    bracketRight.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyB').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyB').engLower;
   }
+  KeyB.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'BracketRight') {
-    event.preventDefault();
-    bracketRight.classList.remove('active');
-  }
+KeyB.addEventListener('mouseup', () => {
+  KeyB.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Backslash') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'backslash').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'backslash').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'backslash').engUpper;
+KeyN.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyN').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'backslash').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyN').rusLower;
     }
-    backslash.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyN').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyN').engLower;
   }
+  KeyN.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Backslash') {
-    event.preventDefault();
-    backslash.classList.remove('active');
-  }
+KeyN.addEventListener('mouseup', () => {
+  KeyN.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Semicolon') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'semicolon').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'semicolon').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'semicolon').engUpper;
+KeyM.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'KeyM').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'semicolon').engLower;
+      textarea.value += keys.find((key) => key.class === 'KeyM').rusLower;
     }
-    semicolon.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'KeyM').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'KeyM').engLower;
   }
+  KeyM.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Semicolon') {
-    event.preventDefault();
-    semicolon.classList.remove('active');
-  }
+KeyM.addEventListener('mouseup', () => {
+  KeyM.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Quote') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'quote').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'quote').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'quote').engUpper;
+Comma.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Comma').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'quote').engLower;
+      textarea.value += keys.find((key) => key.class === 'Comma').rusLower;
     }
-    quote.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'Comma').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'Comma').engLower;
   }
+  Comma.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Quote') {
-    event.preventDefault();
-    quote.classList.remove('active');
-  }
+document.addEventListener('mouseup', () => {
+  Comma.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Comma') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'comma').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'comma').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'comma').engUpper;
+Period.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Period').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'comma').engLower;
+      textarea.value += keys.find((key) => key.class === 'Period').rusLower;
     }
-    comma.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'Period').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'Period').engLower;
   }
+  Period.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Comma') {
-    event.preventDefault();
-    comma.classList.remove('active');
-  }
+Period.addEventListener('mouseup', () => {
+  Period.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Period') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'period').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'period').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'period').engUpper;
+Slash.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'Slash').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'period').engLower;
+      textarea.value += keys.find((key) => key.class === 'Slash').rusLower;
     }
-    period.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'Slash').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'Slash').engLower;
   }
+  Slash.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Period') {
-    event.preventDefault();
-    period.classList.remove('active');
-  }
+Slash.addEventListener('mouseup', () => {
+  Slash.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Slash') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'slash').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'slash').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'slash').engUpper;
+ArrowUp.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'ArrowUp').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'slash').engLower;
+      textarea.value += keys.find((key) => key.class === 'ArrowUp').rusLower;
     }
-    slash.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'ArrowUp').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'ArrowUp').engLower;
   }
+  ArrowUp.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Slash') {
-    event.preventDefault();
-    slash.classList.remove('active');
-  }
+ArrowUp.addEventListener('mouseup', () => {
+  ArrowUp.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'ArrowUp') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'arrowUp').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'arrowUp').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'arrowUp').engUpper;
+ArrowLeft.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'ArrowLeft').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'arrowUp').engLower;
+      textarea.value += keys.find((key) => key.class === 'ArrowLeft').rusLower;
     }
-    arrowUp.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'ArrowLeft').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'ArrowLeft').engLower;
   }
+  ArrowLeft.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'ArrowUp') {
-    event.preventDefault();
-    arrowUp.classList.remove('active');
-  }
+ArrowLeft.addEventListener('mouseup', () => {
+  ArrowLeft.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'ArrowDown') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'arrowDown').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'arrowDown').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'arrowDown').engUpper;
+ArrowDown.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'ArrowDown').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'arrowDown').engLower;
+      textarea.value += keys.find((key) => key.class === 'ArrowDown').rusLower;
     }
-    arrowDown.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'ArrowDown').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'ArrowDown').engLower;
   }
+  ArrowDown.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'ArrowDown') {
-    event.preventDefault();
-    arrowDown.classList.remove('active');
-  }
+ArrowDown.addEventListener('mouseup', () => {
+  ArrowDown.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'ArrowLeft') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'arrowLeft').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'arrowLeft').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'arrowLeft').engUpper;
+ArrowRight.addEventListener('mousedown', () => {
+  if (lang) {
+    if (caps) {
+      textarea.value += keys.find((key) => key.class === 'ArrowRight').rusUpper;
     } else {
-      textarea.value += keys.find((key) => key.class === 'arrowLeft').engLower;
+      textarea.value += keys.find((key) => key.class === 'ArrowRight').rusLower;
     }
-    arrowLeft.classList.add('active');
+  } else if (caps) {
+    textarea.value += keys.find((key) => key.class === 'ArrowRight').engUpper;
+  } else {
+    textarea.value += keys.find((key) => key.class === 'ArrowRight').engLower;
   }
+  ArrowRight.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'ArrowLeft') {
-    event.preventDefault();
-    arrowLeft.classList.remove('active');
-  }
+ArrowRight.addEventListener('mouseup', () => {
+  ArrowRight.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'ArrowRight') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'arrowRight').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'arrowRight').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'arrowRight').engUpper;
-    } else {
-      textarea.value += keys.find((key) => key.class === 'arrowRight').engLower;
-    }
-    arrowRight.classList.add('active');
-  }
+Space.addEventListener('mousedown', () => {
+  textarea.value += ' ';
+  Space.classList.add('active');
 });
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'ArrowRight') {
-    event.preventDefault();
-    arrowRight.classList.remove('active');
-  }
+Space.addEventListener('mouseup', () => {
+  Space.classList.remove('active');
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Space') {
-    event.preventDefault();
-    if (lang) {
-      if (caps) {
-        textarea.value += keys.find((key) => key.class === 'space').rusUpper;
-      } else {
-        textarea.value += keys.find((key) => key.class === 'space').rusLower;
-      }
-    } else if (caps) {
-      textarea.value += keys.find((key) => key.class === 'space').engUpper;
-    } else {
-      textarea.value += keys.find((key) => key.class === 'space').engLower;
-    }
-    space.classList.add('active');
-  }
-});
-document.addEventListener('keyup', (event) => {
-  if (event.code === 'Space') {
-    event.preventDefault();
-    space.classList.remove('active');
-  }
+CapsLock.addEventListener('mousedown', () => {
+  caps = !caps;
+  if (caps) CapsLock.classList.add('active');
+  else CapsLock.classList.remove('active');
+  updateKeyboard();
 });
 
-// "backspace"
-// "tab"
-// "delete"
-// "enter"
-// "controlLeft"
-// "metaLeft"
-// "altLeft"
-// "space"
-// "altRight"
-// "controlRight"
+ShiftLeft.addEventListener('mousedown', () => {
+  caps = !caps;
+  ShiftLeft.classList.add('active');
+  updateKeyboard();
+});
+ShiftLeft.addEventListener('mouseup', () => {
+  caps = !caps;
+  ShiftLeft.classList.remove('active');
+  updateKeyboard();
+});
+
+ShiftRight.addEventListener('mousedown', () => {
+  caps = !caps;
+  ShiftRight.classList.add('active');
+  updateKeyboard();
+});
+ShiftRight.addEventListener('mouseup', () => {
+  caps = !caps;
+  ShiftRight.classList.remove('active');
+  updateKeyboard();
+});
+
+BackSpace.addEventListener('mousedown', () => {
+  const cursorPosition = textarea.selectionStart;
+  if (cursorPosition > 0) {
+    const textBeforeCursor = textarea.value.slice(0, cursorPosition);
+    const textAfterCursor = textarea.value.slice(cursorPosition);
+    const updatedText = textBeforeCursor.slice(0, -1) + textAfterCursor;
+    textarea.value = updatedText;
+    textarea.selectionStart = cursorPosition - 1;
+    textarea.selectionEnd = cursorPosition - 1;
+  }
+});
+BackSpace.addEventListener('mouseup', () => {
+  BackSpace.classList.remove('active');
+});
+
+Tab.addEventListener('mousedown', () => {
+  textarea.setRangeText('\t', textarea.selectionStart, textarea.selectionEnd, 'end');
+  Tab.classList.add('active');
+});
+Tab.addEventListener('mouseup', () => {
+  Tab.classList.remove('active');
+});
+
+KeyDelete.addEventListener('mousedown', () => {
+  const start = textarea.selectionStart;
+  textarea.value = textarea.value.slice(0, start) + textarea.value.slice(start + 1);
+  textarea.setSelectionRange(start, start);
+  KeyDelete.classList.add('active');
+});
+KeyDelete.addEventListener('mouseup', () => {
+  KeyDelete.classList.remove('active');
+});
+
+Enter.addEventListener('mousedown', () => {
+  const start = textarea.selectionStart;
+  const end = textarea.selectionEnd;
+  textarea.value = `${textarea.value.slice(0, start)}\n${textarea.value.slice(end)}`;
+  textarea.setSelectionRange(start + 1, start + 1);
+  Enter.classList.add('active');
+});
+Enter.addEventListener('mouseup', () => {
+  Enter.classList.remove('active');
+});
+
+MetaLeft.addEventListener('mousedown', () => {
+  MetaLeft.classList.add('active');
+});
+MetaLeft.addEventListener('mouseup', () => {
+  MetaLeft.classList.remove('active');
+});
+
+ControlLeft.addEventListener('mousedown', () => {
+  ControlLeft.classList.add('active');
+});
+ControlLeft.addEventListener('mouseup', () => {
+  ControlLeft.classList.remove('active');
+});
+
+AltLeft.addEventListener('mousedown', () => {
+  AltLeft.classList.add('active');
+});
+AltLeft.addEventListener('mouseup', () => {
+  AltLeft.classList.remove('active');
+});
+
+AltRight.addEventListener('mousedown', () => {
+  AltRight.classList.add('active');
+});
+AltRight.addEventListener('mouseup', () => {
+  AltRight.classList.remove('active');
+});
+
+ControlRight.addEventListener('mousedown', () => {
+  ControlRight.classList.add('active');
+});
+ControlRight.addEventListener('mouseup', () => {
+  ControlRight.classList.remove('active');
+});

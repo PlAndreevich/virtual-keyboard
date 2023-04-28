@@ -68,45 +68,45 @@ button {
   transition: background-color 0.3s;
 }
 
-.keyboard .delete {
+.keyboard .Delete {
   width: 44px;
 }
 
-.keyboard .tab {
+.keyboard .Tab {
   width: 50px;
 }
 
-.keyboard .backspace,
-.keyboard .capsLock,
-.keyboard .shiftLeft {
+.keyboard .BackSpace,
+.keyboard .CapsLock,
+.keyboard .ShiftLeft {
   width: 100px;
 }
 
-.keyboard .enter,
-.keyboard .shiftRight {
+.keyboard .Enter,
+.keyboard .ShiftRight {
   width: 86px;
 }
 
-.keyboard .space {
+.keyboard .Space {
   width: 330px;
 }
 
-.keyboard .altLeft,
-.keyboard .altRight,
-.keyboard .arrowUp,
-.keyboard .arrowLeft,
-.keyboard .arrowDown,
-.keyboard .arrowRight,
-.keyboard .backspace,
-.keyboard .capsLock,
-.keyboard .controlLeft,
-.keyboard .controlRight,
-.keyboard .delete,
-.keyboard .enter,
-.keyboard .shiftLeft,
-.keyboard .shiftRight,
-.keyboard .tab,
-.keyboard .metaLeft {
+.keyboard .AltLeft,
+.keyboard .AltRight,
+.keyboard .ArrowUp,
+.keyboard .ArrowLeft,
+.keyboard .ArrowDown,
+.keyboard .ArrowRight,
+.keyboard .BackSpace,
+.keyboard .CapsLock,
+.keyboard .ControlLeft,
+.keyboard .ControlRight,
+.keyboard .Delete,
+.keyboard .Enter,
+.keyboard .ShiftLeft,
+.keyboard .ShiftRight,
+.keyboard .Tab,
+.keyboard .MetaLeft {
   font-weight: 600;
   background-color: #222;
 }
@@ -129,4 +129,3 @@ code {
   background-color: #efefef;
   border-radius: 6px;
 }
-
