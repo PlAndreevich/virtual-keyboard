@@ -473,6 +473,19 @@ keyboardSection.className = 'keyboard';
 let lang = false; // false - английский
 let caps = false; // false - строчные
 
+/* Извлекаем язык */
+/* global localStorage:writable */
+const language = localStorage.getItem('language');
+if (language !== null) {
+  if (language === 'rus') lang = true; // true - русский
+} else localStorage.setItem('language', 'eng');
+
+/* Меняем язык */
+function saveLanguage() {
+  if (lang === false) localStorage.setItem('language', 'eng');
+  else localStorage.setItem('language', 'rus');
+}
+
 /* Функция создания клавиш и добавления их к родительскому элементу */
 keys.forEach((key) => {
   const button = document.createElement('button');
@@ -652,6 +665,7 @@ document.addEventListener('keydown', (event) => {
     event.preventDefault();
     lang = !lang;
     updateKeyboard();
+    saveLanguage();
   }
   if (event.code === 'CapsLock') {
     caps = !caps;
