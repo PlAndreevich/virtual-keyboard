@@ -111,9 +111,21 @@ button {
   background-color: #222;
 }
 
-button:hover,
-button.active {
+button.active,
+button:hover {
   background-color: #3b82f6 !important;
+}
+
+@keyframes button-click {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+button.active,
+button:active {
+  animation-name: button-click;
+  animation-duration: 0.2s;
 }
 
 p {

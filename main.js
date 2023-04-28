@@ -356,14 +356,14 @@ const keys = [
     rusLower: 'б',
     rusUpper: 'Б',
     engLower: ',',
-    engUpper: '&lt;',
+    engUpper: '<',
   },
   {
     class: 'Period',
     rusLower: 'ю',
     rusUpper: 'Ю',
     engLower: '.',
-    engUpper: '&gt;>',
+    engUpper: '>',
   },
   {
     class: 'Slash',
